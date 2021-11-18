@@ -41,3 +41,4 @@
 6. **如果以上都不会的话，注册GLaDOS后，每天勤奋点记得登录后手动进行checkin即可。**
 
    [*<u>如果是Edu邮箱，可免费升级为360天。</u>*]
+7. 图文解释自动签到链接(https://blog.csdn.net/weixin_37551036/article/details/115415358)
