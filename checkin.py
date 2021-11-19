@@ -17,7 +17,7 @@ def start():
     #checkin = requests.post(url,headers={'cookie': cookie ,'referer': referer })
     #state =  requests.get(url2,headers={'cookie': cookie ,'referer': referer})
     origin = "https://glados.rocks"
-    useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36"
+    useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.53"
     payload={
         'token': 'glados_network'
     }
