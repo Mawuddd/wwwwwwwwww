@@ -6,7 +6,7 @@
 
 1、打开 https://github.com/glados-network/GLaDOS ，找到[<u>***Register***</u>]，打开链接，填写邮箱进行登录。
 
-2、输入激活码`LC4CI-CBO6S-RXV13-LT7ND`，进行激活，获得3天试用。
+2、输入激活码`Q6YAA-1NMR1-V2YSX-U2618`，进行激活，获得3天试用。
 
 3、每天手动进行checkin一次，能增加一天。
 
