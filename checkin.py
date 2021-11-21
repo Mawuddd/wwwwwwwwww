@@ -7,7 +7,7 @@ sever = os.environ["SERVE"]
 sckey = os.environ["SCKEY"]
 
 # 填入glados账号对应cookie
-cookie1 = os.environ["COOKIE1"] # @qq.com
+#cookie1 = os.environ["COOKIE1"] # @qq.com
 cookie2 = os.environ["COOKIE2"] # @nuist.edu.cn
 
 
