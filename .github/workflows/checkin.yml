@@ -1,4 +1,4 @@
-name: glados-checkin
+name: glados-auto-checkin
 
 on:
   workflow_dispatch: 
@@ -38,5 +38,6 @@ jobs:
       env: 
         SERVE: ${{ secrets.SERVE }}
         SCKEY: ${{ secrets.SCKEY }}
-        COOKIE: ${{ secrets.COOKIE }}
+        COOKIE1: ${{ secrets.COOKIE1 }}
+        COOKIE2: ${{ secrets.COOKIE2 }}
 
