@@ -22,22 +22,22 @@ def start():
     payload={
         'token': 'glados_network'
     }
-    checkin1 = requests.post(url,headers={'cookie': cookie1 ,'referer': referer,'origin':origin,'user-agent':useragent,'content-type':'application/json;charset=UTF-8'},data=json.dumps(payload))
-    state1 =  requests.get(url2,headers={'cookie': cookie1 ,'referer': referer,'origin':origin,'user-agent':useragent})
+    #checkin1 = requests.post(url,headers={'cookie': cookie1 ,'referer': referer,'origin':origin,'user-agent':useragent,'content-type':'application/json;charset=UTF-8'},data=json.dumps(payload))
+    #state1 =  requests.get(url2,headers={'cookie': cookie1 ,'referer': referer,'origin':origin,'user-agent':useragent})
     
     checkin2 = requests.post(url,headers={'cookie': cookie2 ,'referer': referer,'origin':origin,'user-agent':useragent,'content-type':'application/json;charset=UTF-8'},data=json.dumps(payload))
     state2 =  requests.get(url2,headers={'cookie': cookie2 ,'referer': referer,'origin':origin,'user-agent':useragent})    
     
 
-    if 'message' in checkin1.text:
-        mess = checkin1.json()['message']
-        time = state1.json()['data']['leftDays']
-        time = time.split('.')[0]
-        print(time)
-        if sever == 'on':
-            requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，you have '+time+' days left @qq.com')
-    else:
-        requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=QQ邮箱的cookie过期！请更新COOKIE1')
+    #if 'message' in checkin1.text:
+    #    mess = checkin1.json()['message']
+    #    time = state1.json()['data']['leftDays']
+    #    time = time.split('.')[0]
+    #    print(time)
+    #    if sever == 'on':
+    #        requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，you have '+time+' days left @qq.com')
+    #else:
+    #    requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=QQ邮箱的cookie过期！请更新COOKIE1')
         
     if 'message' in checkin2.text:
         mess = checkin2.json()['message']
