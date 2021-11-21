@@ -35,7 +35,7 @@ def start():
         time = time.split('.')[0]
         print(time)
         if sever == 'on':
-            requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，qq邮箱账号剩余'+time+'天')
+            requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，qq账号剩余'+time+'天')
     else:
         requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=QQ邮箱的cookie过期！请更新COOKIE1')
         
@@ -45,7 +45,7 @@ def start():
         time = time.split('.')[0]
         print(time)
         if sever == 'on':
-            requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，nuist邮箱账号剩余'+time+'天')
+            requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，nuist账号剩余'+time+'天')
     else:
         requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=nuist邮箱的cookie过期！请更新COOKIE2')
 
