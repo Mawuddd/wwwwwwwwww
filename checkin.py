@@ -62,7 +62,7 @@ def start():
     else:
         requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=nuist邮箱的cookie过期！请更新COOKIE2')
      #--------------------------------------------------------------------------------------------------------#   
-     if 'message' in checkin3.text:
+    if 'message' in checkin3.text:
         mess = checkin3.json()['message']
         time = state3.json()['data']['leftDays']
         time = time.split('.')[0]
@@ -72,7 +72,7 @@ def start():
     else:
         requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=231邮箱的cookie过期！请更新COOKIE3')
      #--------------------------------------------------------------------------------------------------------#   
-     if 'message' in checkin4.text:
+    if 'message' in checkin4.text:
         mess = checkin4.json()['message']
         time = state4.json()['data']['leftDays']
         time = time.split('.')[0]
@@ -82,7 +82,7 @@ def start():
     else:
         requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=171邮箱的cookie过期！请更新COOKIE4')
      #--------------------------------------------------------------------------------------------------------#  
-     if 'message' in checkin5.text:
+    if 'message' in checkin5.text:
         mess = checkin5.json()['message']
         time = state5.json()['data']['leftDays']
         time = time.split('.')[0]
