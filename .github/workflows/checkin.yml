@@ -40,4 +40,7 @@ jobs:
         SCKEY: ${{ secrets.SCKEY }}
         COOKIE1: ${{ secrets.COOKIE1 }}
         COOKIE2: ${{ secrets.COOKIE2 }}
+        COOKIE3: ${{ secrets.COOKIE3 }}
+        COOKIE4: ${{ secrets.COOKIE4 }}
+        COOKIE5: ${{ secrets.COOKIE5 }}
 
