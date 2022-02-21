@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    - cron:  0 10 * * * 
+    - cron:  0 19 * * * 
       # 
       # https://tool.lu/crontab/
       # https://datetime360.com/cn/utc-cst-china-time/
@@ -41,6 +41,4 @@ jobs:
         COOKIE1: ${{ secrets.COOKIE1 }}
         COOKIE2: ${{ secrets.COOKIE2 }}
         COOKIE3: ${{ secrets.COOKIE3 }}
-        COOKIE4: ${{ secrets.COOKIE4 }}
-        COOKIE5: ${{ secrets.COOKIE5 }}
 
