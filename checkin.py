@@ -4,7 +4,8 @@ import requests,json,os
 sever = os.environ["SERVE"]
 
 # 填写server酱sckey,不开启server酱则不用填
-sckey = os.environ["SCKEY"]
+sckey = 'off'
+# os.environ["SCKEY"]
 
 # 填入glados账号对应cookie
 cookie1 = os.environ["COOKIE1"] # 20211201028@nuist.edu.cn
@@ -21,7 +22,7 @@ def start():
     origin = "https://glados.rocks"
     useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.56"
     payload={
-        'token': 'glados_network'
+        'token': 'glados.network'
     }
     checkin1 = requests.post(url,headers={'cookie': cookie1 ,'referer': referer,'origin':origin,'user-agent':useragent,'content-type':'application/json;charset=UTF-8'},data=json.dumps(payload))
     state1 =  requests.get(url2,headers={'cookie': cookie1 ,'referer': referer,'origin':origin,'user-agent':useragent})
