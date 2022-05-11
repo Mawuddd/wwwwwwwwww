@@ -16,7 +16,7 @@ cookie3 = os.environ["COOKIE3"] # 2226840339@qq.com
 
 
 def start():    
-    url= "https://glados.rocks/api/user/checkin"
+    url= "https://glados.one/console/checkin"
     url2= "https://glados.rocks/api/user/status"
     referer = 'https://glados.rocks/console/checkin'
     origin = "https://glados.rocks"
