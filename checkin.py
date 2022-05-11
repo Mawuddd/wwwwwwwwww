@@ -4,8 +4,7 @@ import requests,json,os
 sever = os.environ["SERVE"]
 
 # 填写server酱sckey,不开启server酱则不用填
-sckey = 'off'
-# os.environ["SCKEY"]
+sckey = os.environ["SCKEY"]
 
 # 填入glados账号对应cookie
 cookie1 = os.environ["COOKIE1"] # 20211201028@nuist.edu.cn
@@ -16,7 +15,7 @@ cookie3 = os.environ["COOKIE3"] # 2226840339@qq.com
 
 
 def start():    
-    url= "https://glados.one/console/checkin"
+    url= "https://glados.rocks/api/user//checkin"
     url2= "https://glados.rocks/api/user/status"
     referer = 'https://glados.rocks/console/checkin'
     origin = "https://glados.rocks"
