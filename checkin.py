@@ -1,9 +1,9 @@
 import requests,json,os
 
-# server酱开关，填off不开启(默认)，填on同时开启cookie失效通知和签到成功通知
+# 推送开关，填off不开启(默认)，填on同时开启cookie失效通知和签到成功通知
 sever = os.environ["SERVE"]
 
-# 填写server酱sckey,不开启server酱则不用填
+# 填写pushplus的sckey,不开启推送则不用填
 sckey = os.environ["SCKEY"]
 
 # 填入glados账号对应cookie
@@ -15,10 +15,10 @@ cookie3 = os.environ["COOKIE3"] # 2226840339@qq.com
 
 
 def start():    
-    url= "https://glados.rocks/api/user//checkin"
-    url2= "https://glados.rocks/api/user/status"
-    referer = 'https://glados.rocks/console/checkin'
-    origin = "https://glados.rocks"
+    url= "https://glados.one/api/user/checkin"
+    url2= "https://glados.one/api/user/status"
+    referer = 'https://glados.one/console/checkin'
+    origin = "https://glados.one"
     useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.56"
     payload={
         'token': 'glados.network'
@@ -34,35 +34,35 @@ def start():
     
     
 
+    time1 = state1.json()['data']['leftDays']
+    time1 = time.split('.')[0]
+    email1 = state1.json()['data']['email']
     if 'message' in checkin1.text:
         mess = checkin1.json()['message']
-        time = state1.json()['data']['leftDays']
-        time = time.split('.')[0]
-        print(time)
         if sever == 'on':
-            requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，2021edu'+time+'天')
+            requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title='+mess+'&content='+email1+' 剩余'+time1+'天')
     else:
-        requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=2021edu需更新COOKIE1')
-    #--------------------------------------------------------------------------------------------------------#  
+        requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email1+'更新cookie')
+    #--------------------------------------------------------------------------------------------------------# 
+    time2 = state2.json()['data']['leftDays']
+    time2 = time.split('.')[0]
+    email2 = state2.json()['data']['email']
     if 'message' in checkin2.text:
         mess = checkin2.json()['message']
-        time = state2.json()['data']['leftDays']
-        time = time.split('.')[0]
-        print(time)
         if sever == 'on':
-            requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，2021谷歌'+time+'天')
+            requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title='+mess+'&content='+email2+' 剩余'+time2+'天')
     else:
-        requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=2021谷歌需更新COOKIE2')
+        requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email2+'更新cookie')
      #--------------------------------------------------------------------------------------------------------#   
+    time3 = state3.json()['data']['leftDays']
+    time3 = time.split('.')[0]
+    email3 = state3.json()['data']['email']
     if 'message' in checkin3.text:
         mess = checkin3.json()['message']
-        time = state3.json()['data']['leftDays']
-        time = time.split('.')[0]
-        print(time)
         if sever == 'on':
-            requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，222QQ'+time+'天')
+            requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title='+mess+'&content='+email3+' 剩余'+time3+'天')
     else:
-        requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text=222QQ需更新COOKIE3')
+        requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email3+'更新cookie')
      #--------------------------------------------------------------------------------------------------------#   
 
 
@@ -71,5 +71,3 @@ def main_handler(event, context):
 
 if __name__ == '__main__':
     start()
-
-    
