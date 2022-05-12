@@ -35,7 +35,7 @@ def start():
     
 
     time1 = state1.json()['data']['leftDays']
-    time1 = time.split('.')[0]
+    time1 = time1.split('.')[0]
     email1 = state1.json()['data']['email']
     if 'message' in checkin1.text:
         mess = checkin1.json()['message']
@@ -45,7 +45,7 @@ def start():
         requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email1+'更新cookie')
     #--------------------------------------------------------------------------------------------------------# 
     time2 = state2.json()['data']['leftDays']
-    time2 = time.split('.')[0]
+    time2 = time2.split('.')[0]
     email2 = state2.json()['data']['email']
     if 'message' in checkin2.text:
         mess = checkin2.json()['message']
@@ -55,7 +55,7 @@ def start():
         requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email2+'更新cookie')
      #--------------------------------------------------------------------------------------------------------#   
     time3 = state3.json()['data']['leftDays']
-    time3 = time.split('.')[0]
+    time3 = time3.split('.')[0]
     email3 = state3.json()['data']['email']
     if 'message' in checkin3.text:
         mess = checkin3.json()['message']
