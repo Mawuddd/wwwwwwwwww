@@ -4,11 +4,11 @@
 
 2、通过cookies自动登录（[https://glados.rocks/console/checkin](https://glados.rocks/console/checkin))，脚本会自动进行checkin。
 
-3、然后通过“Server酱”（[https://sct.ftqq.com](https://sct.ftqq.com))，自动发通知到微信上。
+3、然后通过“pushplus”（[https://www.pushplus.plus/](https://www.pushplus.plus/))，自动发通知到微信上。
 
 
 
-#### 食用姿势：
+#### 使用方法：
 
 1. 先“Fork”本仓库。（不需要修改任何文件！）
 
@@ -19,10 +19,10 @@
 4. 在自己的仓库“Settings”里创建3个“Secrets”，分别是：（不开启通知，只需要创建一个COOKIE即可）
 
    - COOKIE（**必填**）
-   - SERVE（server酱开关，默认是off，填on的话，会同时开启cookie失效通知和签到成功通知）
-   - SCKEY（填写server酱sckey，不开启server酱则不用填）
+   - SERVE（推送开关，默认是off，填on的话，会同时开启cookie失效通知和签到成功通知）
+   - SCKEY（填写pushplus的token，不开启则不用填）
 
-5. 以上设置完毕后，每天零点会自动触发，并会执行自动checkin，如果开启server酱，会自动发通知到微信上。
+5. 以上设置完毕后，每天零点会自动触发，并会执行自动checkin，如果开启pushplus，会自动发通知到微信上。
 
 6. **如果以上都不会的话，注册GLaDOS后，每天勤奋点记得登录后手动进行checkin即可。**
 
