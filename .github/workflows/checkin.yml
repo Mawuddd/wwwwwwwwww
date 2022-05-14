@@ -38,7 +38,6 @@ jobs:
       env: 
         SERVE: ${{ secrets.SERVE }}
         SCKEY: ${{ secrets.SCKEY }}
-        COOKIE1: ${{ secrets.COOKIE1 }}
-        COOKIE2: ${{ secrets.COOKIE2 }}
-        COOKIE3: ${{ secrets.COOKIE3 }}
+        COOKIES: ${{ secrets.COOKIES }}
+    - uses: gautamkrishnar/keepalive-workflow@master # using the workflow with default settings
 
