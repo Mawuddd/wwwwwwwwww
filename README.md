@@ -12,19 +12,14 @@
 
 1. 先“Fork”本仓库。（不需要修改任何文件！）
 
-2. 注册GLaDOS，方法见上。
+2. 登录GLaDOS后获取cookies。（简单获取方法：浏览器快捷键F12，打开调试窗口，点击“network”获取）
 
-3. 登录GLaDOS后获取cookies。（简单获取方法：浏览器快捷键F12，打开调试窗口，点击“network”获取）
+4. 在自己的仓库“Settings”里创建3个“Secrets”，分别是：（不开启通知，只需要创建COOKIES即可）
 
-4. 在自己的仓库“Settings”里创建3个“Secrets”，分别是：（不开启通知，只需要创建一个COOKIE即可）
-
-   - COOKIE（**必填**）
-   - SERVE（推送开关，默认是off，填on的话，会同时开启cookie失效通知和签到成功通知）
+   - COOKIES（**必填**）
+   - SERVE（推送开关，off关闭通知，填on的话，会同时开启cookie失效通知和签到成功通知）
    - SCKEY（填写pushplus的token，不开启则不用填）
 
 5. 以上设置完毕后，每天零点会自动触发，并会执行自动checkin，如果开启pushplus，会自动发通知到微信上。
 
-6. **如果以上都不会的话，注册GLaDOS后，每天勤奋点记得登录后手动进行checkin即可。**
-
-   [*<u>如果是Edu邮箱，可免费升级为360天。</u>*]
-7. 图文解释自动签到链接(https://blog.csdn.net/weixin_37551036/article/details/115415358)
+##### 额外说明：有多个glados账号时，在变量COOKIES里使用“&&”分割不同的账号的cookie，不需要空格换行等。
