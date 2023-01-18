@@ -12,7 +12,11 @@
 
 1. 先“Fork”本仓库。（不需要修改任何文件！）
 
-2. 登录GLaDOS后获取cookies。（简单获取方法：浏览器快捷键F12，打开调试窗口，点击“network”获取）
+2. 登录GLaDOS后获取cookies。（简单获取方法：浏览器快捷键F12，打开调试窗口，点击“network(网络)”获取）
+![捕获](https://user-images.githubusercontent.com/89286395/213177136-53e16eea-c1de-4390-bdda-07faa002df27.PNG)
+![IMG_20230118_204916](https://user-images.githubusercontent.com/89286395/213177186-8628fd0f-aaa5-4a5d-adc9-4ad107874ebd.jpg)
+选中cookie，右键复制值，然后去仓库粘贴到COOKIES下即可。
+
 
 4. 在自己的仓库`Settings`里创建3个`Secrets`，分别是：（不开启通知，只需要创建COOKIES即可）
 
